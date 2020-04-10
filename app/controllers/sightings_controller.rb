@@ -6,7 +6,7 @@ class SightingsController < ApplicationController
   end
 
   def show
-    sighting = Sighting.find(params[:id])
+    sighting = Sighting.find(id: params[:id])
     render json: SightingSerializer.new(sighting)
   end
 end
